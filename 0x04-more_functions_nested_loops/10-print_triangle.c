@@ -25,5 +25,5 @@ void print_triangle(int n)
 		}
 	}
 
-	putchar('\n');
+	_putchar('\n');
 }
