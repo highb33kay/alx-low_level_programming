@@ -12,10 +12,10 @@ void print_triangle(int n)
 	{
 		for (h = 1; h <= n; h++)
 		{
-			for (tri = n - h; tru > 0; tri --)
+			for (tri = n - h; tru > 0; tri--)
 				_putchar(' ');
 
-			for (tri = 0; tri < h; tri ++)
+			for (tri = 0; tri < h; tri++)
 				_putchar('#');
 
 			if (h == n)
