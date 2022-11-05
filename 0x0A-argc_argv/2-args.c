@@ -2,8 +2,8 @@
 #include <stdlib.h>
 /**
  * main - prints all argument on a new line
- * @argc: all arguments 
- * @argv: all arguments 
+ * @argc: all arguments
+ * @argv: all arguments
  * Return: 0
  */
 int main(int argc, char *argv[])
