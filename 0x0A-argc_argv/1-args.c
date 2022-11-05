@@ -5,14 +5,14 @@
  * @argv: commands passed
  * Return: 0
  */
-int main(int argc, char **argv[])
+int main(int argc, char *argv[])
 {
 	(void) argv;
 	int i;
 
 	for (i = 0; i < argc; i++)
 	{
-		printf("%i\n", argc - 1);
+		printf("%d\n", argc - 1);
 		return (0);
 	}
 }
