@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ * main - prints all argument on a new line
+ * @argc: all arguments 
+ * @argv: all arguments 
+ * Return: 0
+ */
+int main(int argc, char *argv[])
+{
+	int i;
+
+	for (i = 0; i < argc; i++)
+	{
+		printf(argv[i]);
+		printf("\n");
+	}
+	return (0);
+}
