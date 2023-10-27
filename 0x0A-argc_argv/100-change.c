@@ -1,22 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * isInteger - checks if a string is an integer
- * @s: string to check
- * Return: 1 if true, 0 if false
+ * main - prints the minimum number of coins to make change for an amount of money
+ * @argc: count of argumnets
+ * @argv: array of arguments
+ * Return: 0
  */
-
-int isInteger(char *s)
-{
-	int i = 0;
-
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		if (s[i] < '0' || s[i] > '9')
-			return 0;
-	}
-	return 1;
-}
 
 int main(int argc, char *argv[])
 {
@@ -29,9 +18,14 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 
-	if (isInteger(argv[1]))
+	i = atoi(argv[1]);
+
+	if (i < 0)
 	{
-		i = atoi(argv[1]);
+		printf("0\n");
+	}
+	else
+	{
 		while (i > 0 && coin <= 4)
 		{
 			if (i >= coins[coin])
@@ -40,10 +34,12 @@ int main(int argc, char *argv[])
 				coinsUsed++;
 			}
 			else
+			{
 				coin++;
+			}
 		}
+		printf("%d\n", coinsUsed);
 	}
 
-	printf("%d\n", coinsUsed);
 	return 0;
 }
