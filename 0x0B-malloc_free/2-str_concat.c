@@ -13,11 +13,8 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *concat;
-	unsigned int i;
-	unsigned int j;
-	unsigned int length_S1;
-	unsigned int length_S2;
-	unsigned int length_c;
+	unsigned int i, j;
+	unsigned int length_S1, length_S2, length_c;
 
 	if (s1 == NULL)
 		s1 = "";

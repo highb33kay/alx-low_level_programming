@@ -5,19 +5,15 @@
 /**
  * main - check the code
  *
- * Return: Always 0.
+ * Return: The length of @s.
  */
 int main(void)
 {
-    char *a;
+    char *s;
+    int len;
 
-    a = create_array(98, 'H');
-    if (a == NULL)
-    {
-        printf("failed to allocate memory\n");
-        return (1);
-    }
-    printf("I think it worked :)\n");
-    free(a);
+    s = _strdup("ALX SE");
+    printf("%s\n", s);
+    free(s);
     return (0);
 }
