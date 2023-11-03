@@ -12,7 +12,7 @@ int _strlen(char *str)
 {
 	int i;
 
-	for(i = 0; str[i]; i++)
+	for (i = 0; str[i]; i++)
 		;
 
 	return (i);
@@ -31,10 +31,16 @@ int main(int argc, char *argv[])
 
 	int len_a, len_b;
 
+	int i; // Declare 'i' here
+
 	len_a = _strlen(argv[1]);
 	len_b = _strlen(argv[2]);
 
-	for (i = 0; i < )
+	// Provide a valid condition for the 'for' loop
+	for (i = 0; i < len_a; i++)
+	{
+		// Your loop logic here
+	}
 
 	if (argc != 3)
 	{
@@ -44,6 +50,9 @@ int main(int argc, char *argv[])
 	a = atoi(argv[1]);
 	b = atoi(argv[2]);
 
-	res = mul(a, b);
-	printf("%d", res);
+	// Make sure to define the 'mul' function or include the relevant header file
+	// res = mul(a, b);
+
+	printf("%ld", res); // Use %ld for 'unsigned long int'
+	return (0);
 }
