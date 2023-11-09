@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * print_name - Prints a name.
  * @name: Name to print.
@@ -11,6 +10,6 @@ void print_name(char *name, void (*f)(char *))
 {
     if (name && f)
     {
-        f(name);
+        f(name, "/n");
     }
 }
