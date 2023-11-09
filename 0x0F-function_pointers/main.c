@@ -1,32 +1,38 @@
-#include "function_pointers.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include "function_pointers.h"
 
 /**
- * print_name_wrapper - Prints a name.
- * @name: Name to print.
+ * print_elem - prints an integer
+ * @elem: the integer to print
  *
  * Return: Nothing.
  */
-
-void print_name_wrapper(char *name)
+void print_elem(int elem)
 {
-    printf("%s\n", name);
+    printf("%d\n", elem);
 }
 
 /**
- * main - Entry point.
- * Test the code.
+ * print_elem_hex - prints an integer, in hexadecimal
+ * @elem: the integer to print
  *
- * Return: Always 0 (Success).
+ * Return: Nothing.
  */
+void print_elem_hex(int elem)
+{
+    printf("0x%x\n", elem);
+}
 
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-    char *name = "Danton Rodriguez Molina";
-    void (*f)(char *) = print_name_wrapper;
+    int array[5] = {0, 98, 402, 1024, 4096};
 
-    print_name(name, f);
-
+    array_iterator(array, 5, &print_elem);
+    array_iterator(array, 5, &print_elem_hex);
     return (0);
 }
