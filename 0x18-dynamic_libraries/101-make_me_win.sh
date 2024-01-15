@@ -1,6 +1,2 @@
 #!/bin/bash
-
-echo '#include <stdlib.h>' > /tmp/hack.c
-echo 'int rand(void) { return 9; }' >> /tmp/hack.c
-gcc -shared -fPIC -o /tmp/hack.so /tmp/hack.c
-env LD_PRELOAD=/tmp/hack.so ./gm 9 8 10 24 75 9
+echo 'int main() { return 9; }' > libwin.c && gcc -o libwin.so -shared libwin.c && export LD_PRELOAD=$PWD/libwin.so
