@@ -1,10 +1,9 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
-
 /**
  * main - Entry point
- *
+ * Description: Generates a random number and prints if it is positive
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -13,7 +12,6 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-
 	if (n > 0)
 	{
 		printf("%d is positive\n", n);
